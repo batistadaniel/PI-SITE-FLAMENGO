@@ -1,0 +1,140 @@
+/* Importa a fonte Montserrat do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Define o estilo padrão para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif; /* Define a fonte padrão como Montserrat */
+}
+
+/* Define o layout básico do corpo da página */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Faz com que o corpo ocupe a altura total da viewport */
+}
+
+/* Estilo para o container do logo */
+.logo {
+    text-align: center; /* Alinha o texto e a imagem ao centro */
+    justify-content: center;
+    margin: 0 auto; /* Centraliza o logo horizontalmente */
+}
+
+/* Estilo para a imagem dentro do container do logo */
+.logo img {
+    width: 60%; /* Define a largura da imagem como 60% do container pai */
+}
+
+/* Estilo para o formulário de cadastro */
+.formulario {
+    display: grid; /* Usa grid layout para o formulário */
+    width: 350px; /* Define a largura do formulário */
+    height: 600px; /* Define a altura do formulário */
+    border-radius: 20px; /* Define bordas arredondadas no formulário */
+    box-shadow: 2px 2px 10px black; /* Adiciona uma sombra ao formulário */
+    padding: 10px; /* Adiciona padding interno */
+    align-items: center; /* Alinha os itens no centro do formulário */
+}
+
+/* Estilo para o container de inputs dentro do formulário */
+.inputs {
+    position: relative; /* Define o posicionamento relativo para elementos filhos */
+}
+
+/* Estilo para a seção de inputs dentro do formulário */
+.formulario .inputs {
+    display: flex;
+    flex-direction: column; /* Organiza os inputs em coluna */
+    gap: 10px; /* Define um espaço entre os inputs */
+    align-items: center; /* Alinha os inputs ao centro */
+}
+
+/* Estilo para cada input dentro do formulário */
+.formulario .inputs input {
+    width: 80%; /* Define a largura dos inputs */
+    padding: 15px; /* Adiciona padding interno */
+    border: .5px solid #f0f0f0; /* Define a borda dos inputs */
+    outline: none; /* Remove o contorno padrão ao focar */
+    background-color: rgb(231, 231, 231); /* Define a cor de fundo dos inputs */
+    border-radius: 5px; /* Define bordas arredondadas nos inputs */
+    margin: 0 auto; /* Centraliza os inputs horizontalmente */
+}
+
+/* Estilo para os inputs quando estão em foco */
+.formulario .inputs input:focus {
+    box-shadow: 0 0 6px rgba(226, 91, 91, 0.9); /* Adiciona uma sombra ao focar no input */
+}
+
+/* Estilo para o container de botões */
+.btns {
+    display: flex;
+    width: 264px; /* Define a largura do container de botões */
+    gap: 35px; /* Define um espaço entre os botões */
+}
+
+/* Estilo para os botões dentro do formulário */
+button {
+    width: 50%; /* Define a largura dos botões */
+    margin: 0 auto; /* Centraliza os botões horizontalmente */
+    padding: 10px; /* Adiciona padding interno aos botões */
+    font-size: 20px; /* Define o tamanho da fonte dos botões */
+    text-transform: uppercase; /* Transforma o texto dos botões em maiúsculas */
+    background-color: red; /* Define a cor de fundo dos botões */
+    color: white; /* Define a cor do texto dos botões */
+    border: none; /* Remove a borda padrão dos botões */
+    border-radius: 35px; /* Define bordas arredondadas nos botões */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre os botões */
+}
+
+/* Estilo para os botões ao passar o mouse sobre eles */
+button:hover {
+    color: black; /* Muda a cor do texto para preto ao passar o mouse */
+}
+
+/* Estilo para links dentro do formulário */
+a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white; /* Define a cor do texto dos links */
+}
+
+/* Estilo para links ao passar o mouse sobre eles */
+a:hover {
+    color: black; /* Muda a cor do texto para preto ao passar o mouse */
+}
+
+/* Estilo para a mensagem exibida no formulário */
+.msg {
+    padding: 60px; /* Adiciona padding interno à mensagem */
+    border-radius: 10px; /* Define bordas arredondadas na mensagem */
+    font-size: 20px; /* Define o tamanho da fonte da mensagem */
+    background-color: rgba(0, 0, 0, 0.904); /* Define a cor de fundo da mensagem */
+    color: tomato; /* Define a cor do texto da mensagem */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    box-shadow: 0 0 5px rgba(8, 8, 8, 0.4); /* Adiciona uma sombra à mensagem */
+    margin-bottom: 80px; /* Adiciona uma margem inferior à mensagem */
+    animation: fall 3s ease-out forwards; /* Aplica a animação 'fall' à mensagem */
+}
+
+/* Estilo para o ícone de mostrar/esconder senha */
+.inputs i {
+    font-size: 20px; /* Define o tamanho da fonte do ícone */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o ícone */
+    position: absolute; /* Define o posicionamento absoluto do ícone */
+    top: 47%; /* Posiciona o ícone verticalmente no meio do campo de senha */
+    left: 77%; /* Posiciona o ícone horizontalmente à direita do campo de senha */
+}
+
+/* Animação para a mensagem */
+@keyframes fall {
+    0% {
+        transform: translateY(-100%); /* Define a posição inicial da mensagem fora da tela */
+    }
+    100% {
+        transform: translateY(50px); /* Define a posição final da mensagem visível na tela */
+    }
+}

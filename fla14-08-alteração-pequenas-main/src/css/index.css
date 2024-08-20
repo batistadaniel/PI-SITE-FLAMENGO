@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-image: url(https://flamengo.s3.sa-east-1.amazonaws.com/matchday/prod/assets/img/HomeEstadio2024/bg-1scroll-web.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+header {
+    width: 100%;
+    height: 50px;
+}
+
+header input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+}
+
+main {
+    width: 100%;
+}
+
+#box-login {
+    display: none;
+    justify-content: center;
+    margin-top: 75px;
+}
+
+#box-login.abrir-login {
+    display: flex;
+}
+
+.btn-login {
+    font: normal 15pt arial;
+    width: 120px;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid white;
+    float: right;
+    font-weight: 700;
+    margin: 20px 50px 20px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+
+.btn-login:hover {
+    border-color: red;
+}
+
+p {
+    border: none;
+    display: flex;
+    gap: 10px;
+}
+
+p::before {
+    display: flex;
+    content: '';
+    background-image: url('https://images.mengo.com.br/prod/assets/images/shield-mark.png');
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    background-color: white;
+    width: 600px;
+    height: 600px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px black;
+}
+
+.logo {
+    width: 200px;
+    height: 600px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.logo img {
+    width: 100%;
+}
+.logo-mobile {
+    display: none;
+}
+
+.formulario {
+    width: 400px;
+}
+
+.formulario .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario .inputs input {
+    width: 80%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.but {
+    font: normal 15pt arial;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.but:hover {
+    color: black;
+}
+
+.inputs {
+    position: relative;
+}
+
+.email {
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    outline: 1px solid rgb(51, 50, 50);
+    box-shadow: 2px 2px 2px black;
+}
+
+.input-label {
+    font: normal 13pt arial;
+    position: absolute;
+    padding-left: 40px;
+    top: 0;
+    transform: translate(15px, 12px);
+    transition: transform .25s;
+}
+
+.email:focus+.input-label,
+.email:valid+.input-label {
+    transform:
+        translate(10px, -1px) scale(.8);
+    padding-inline: 30px;
+}
+
+.email:is(:focus, :valid) {
+    outline: 2px solid rgb(148, 146, 146);
+}
+
+.senha {
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    outline: 1px solid rgb(51, 50, 50);
+    box-shadow: 2px 2px 2px black;
+}
+
+.input-senha {
+    font: normal 13pt arial;
+    position: absolute;
+    padding-left: 40px;
+    top: 60px;
+    transform: translate(15px, 10px);
+    transition: transform .25s;
+}
+
+.senha:focus+.input-senha,
+.senha:valid+.input-senha {
+    transform:
+        translate(10px, -3px) scale(.8);
+    padding-inline: 30px;
+}
+
+.senha:is(:focus, :valid) {
+    outline: 2px solid rgb(148, 146, 146);
+}
+
+.inputs i {
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 37%;
+    left: 80%;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+}
+
+a:hover {
+    color: red;
+}
+#msg {
+    position: absolute;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+.msg {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    padding: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.904);
+    color: tomato;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(8, 8, 8, 0.4);
+    margin-bottom: 80px;
+    white-space: nowrap;
+
+    position: fixed; 
+    animation: deslizar 1s ease-out forwards;
+    transition: top 4s ease-out;
+}
+@keyframes deslizar {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        width: 350px;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .logo {
+        display: none;
+    }
+    /* .formulario {
+        width: 600px;
+    } */
+    .logo-mobile {
+        display: block;
+        width: 100px;
+        filter: invert(1) brightness(0) contrast(1) drop-shadow(2px 2px 10px rgb(202, 46, 46));
+    }
+
+    .msg {
+        font-size: 18px;
+        width: max-content;
+        white-space: nowrap;
+        padding: 20px;
+    }
+
+    
+}

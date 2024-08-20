@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    padding: 30px 40px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-mobile {
+    width: 36px;
+    filter: drop-shadow(2px 2px 10px #ca2e2f);
+}
+
+.titulo a {
+    color: #ca2e2f;
+}
+
+.icone-perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: aliceblue;
+    padding: 4px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none; /* Oculta o menu por padrão */
+    position: absolute;
+    top: 100%; /* Posiciona o menu logo abaixo do ícone */
+    right: 0; /* Alinha o menu com o lado direito do ícone */
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    min-width: 100px; /* Largura mínima do menu */
+
+    animation: descer 0.2s ease-out forwards;
+}
+
+@keyframes descer {
+    0% {
+        transform: translateY(-30%);
+    }
+    100% {
+        transform: translateY(1px);
+    }
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #444;
+    border-radius: 10px;
+}
+
+header .bi-person-circle {
+    /* float: right; */
+    font-size: 30px;
+    color: #ca2e2f;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 130px 0 200px;
+}
+
+.sessao-comentario {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    height: max-content;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 16px;
+    box-shadow: 2px 2px 10px #ca2e2f;
+    gap: 15px;
+
+}
+
+.sessao-comentario .box-comentario textarea {
+    width: 700px;
+    height: 160px;
+    padding: 10px;
+    border-radius: 16px;
+    border: 2px solid rgba(60, 78, 110, .18);
+    resize: vertical;
+}
+
+.sessao-comentario .btn-comentario {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid rgba(60, 78, 110, .18);
+    cursor: pointer;
+    background-color: #ebebeb;
+    color: #ca2e2f;
+    border-radius: 16px;
+    font-weight: bold;
+    transition: .4s ease-out;
+}
+
+.sessao-comentario .btn-comentario:hover {
+    background-color: #000000ce;
+}
+
+.sessao-comentario .email-comentario input {
+    padding: 10px;
+    width: 220px;
+    border-radius: 16px;
+    border: 2px solid rgba(60, 78, 110, .18);
+
+    /* resize: vertical; */
+}
+
+/* textarea:focus {
+    border: none;
+
+} */
+
+.sessao-comentario .comentario {
+    display: flex;
+    margin: 0px 50px;
+    flex-direction: column;
+    width: 600px;
+    justify-content: right;
+    font-size: 16px;
+    gap: 10px;
+
+    padding: 20px;
+    border-radius: 16px;
+    border: 2px solid rgba(60, 78, 110, .18);
+}
+
+#comentario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.texto-comentario {
+    font-size: 14px;
+    white-space: pre-line; /* Preserve espaços e quebras de linha */
+}
+
+.nome-comentario {
+    color: #ca2e2f;
+}
+
+.top-comentario {
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+.msg {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.904);
+    color: tomato;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(8, 8, 8, 0.4);
+    margin-bottom: 80px;
+    animation: fall 1s ease-out forwards;
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(70px);
+    }
+}
+
+.acoes-comentarios {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-form {
+    margin-top: 10px;
+}
+
+.edit-form textarea {
+    width: 100%;
+    height: 100px;
+}
+
+.edit-form button {
+    margin-top: 5px;
+}
+.btn-acao{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;    
+}
+.btn-acao-edit {
+    display: flex;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.btn-acao-edit .btn-editar2{
+    width: 120px;
+    /* margin: 0 auto; */
+    padding: 8px;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.btn-acao-edit .btn-editar2:hover {
+    color: black;
+}
+
+.bi{
+    color: #ca2e2f;
+    font-size: 20px;
+}
+
+hr {
+    border: 1px solid #ca2e2f;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.paginacao{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+}
+.pagina_atual{
+    border: 2px solid;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+.primeira_pag, .pagina_ant, .pag_dep, .ultima_pag{
+    color: #ca2e2f;
+    border: 2px solid;
+    padding: 2px 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 30px 16px;
+    }
+    .titulo h1 {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .icone-perfil h3 {
+        display: none;
+    }
+    .sessao-comentario {
+        width: 90%;
+        height: max-content;
+        display: flex;
+        padding: 10px;
+    }
+
+    .sessao-comentario .comentario {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .sessao-comentario .box-comentario textarea {
+        width: 100%;
+    }
+
+    #comentario .comentario {
+        width: 80%;
+    }
+
+    .msg {
+        width: 80%;
+    }
+    .edit-form {
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+}
