@@ -1,0 +1,17 @@
+CREATE TABLE dados (
+    id INT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    senha VARCHAR(100) NOT NULL,
+    cpf VARCHAR(11) NOT NULL UNIQUE,
+    created_data DATETIME NOT NULL
+);
+
+CREATE TABLE comentarios (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    comentario VARCHAR(5000) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    created DATETIME NOT NULL,
+    dados_id INT NOT NULL,
+    FOREIGN KEY (dados_id) REFERENCES dados2(id)
+);
